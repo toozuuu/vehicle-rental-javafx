@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: #ffff;" stylesheets="@../style/managecustomerform.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.PaymentFormDashBoardController">
+   <children>
+      <Label layoutX="86.0" layoutY="63.0" text="Payment">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmdDriver" disable="true" labelFloat="true" layoutX="343.0" layoutY="157.0" onAction="#cmdSelectDriver" prefHeight="26.0" prefWidth="191.0" promptText="Driver" />
+      <JFXTextField fx:id="txtDamageCharges" disable="true" labelFloat="true" layoutX="562.0" layoutY="157.0" onAction="#txtDamageCharges" prefHeight="26.0" prefWidth="191.0" promptText="Enter the Damage Charges" />
+      <JFXTextField fx:id="txtAdvancePaid" labelFloat="true" layoutX="96.0" layoutY="361.0" onAction="#txtAdvancePaid" prefHeight="26.0" prefWidth="191.0" promptText="Enter the Advance Paid" />
+      <JFXCheckBox fx:id="checkBOXDriver" layoutX="350.0" layoutY="124.0" onMouseClicked="#isSelectedDriver" text="Add Driver ?" />
+      <JFXCheckBox fx:id="checkBOXDamage" layoutX="562.0" layoutY="124.0" onMouseClicked="#isSelectedDamage" text="Damage Remark ?" />
+      <ScrollPane layoutX="42.0" layoutY="500.0" prefHeight="200.0" prefWidth="951.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1680.0">
+               <children>
+                  <TableView layoutX="-2.0" layoutY="-7.0" onMouseClicked="#tblRowClicked" prefHeight="214.0" prefWidth="1684.0">
+                     <columns>
+                        <TableColumn prefWidth="118.0" text="Reservation ID" />
+                        <TableColumn prefWidth="118.0" text="Payment Date" />
+                        <TableColumn prefWidth="99.0" text="NIC" />
+                        <TableColumn prefWidth="93.0" text="Vehicle NO" />
+                        <TableColumn prefWidth="114.0" text="Booking Date" />
+                        <TableColumn prefWidth="132.0" text="Booking Till Date" />
+                        <TableColumn prefWidth="118.0" text="Booking  Time" />
+                        <TableColumn prefWidth="145.0" text="Booking Till Time" />
+                        <TableColumn prefWidth="110.0" text="Driver Name" />
+                        <TableColumn prefWidth="169.0" text="Damage Charges" />
+                        <TableColumn prefWidth="124.0" text="Price_Per_Day" />
+                        <TableColumn prefWidth="116.0" text="Advance Paid" />
+                        <TableColumn prefWidth="92.0" text="Total Price" />
+                        <TableColumn prefWidth="135.0" text="Payment Status" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <JFXButton buttonType="RAISED" layoutX="422.0" layoutY="321.0" onMouseClicked="#btnAdd" prefHeight="53.0" prefWidth="129.0" ripplerFill="BLACK" style="-fx-background-color: #90a4ae;" text="Add">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="601.0" layoutY="321.0" onMouseClicked="#btnUpdate" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Update">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="773.0" layoutY="321.0" onMouseClicked="#btnClear" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Clear" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="915.0" layoutY="725.0" onMouseClicked="#imgRefersh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8-synchronize-100.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtSearchCustomer" labelFloat="true" layoutX="744.0" layoutY="70.0" onAction="#txtSearchCustomer" prefHeight="26.0" prefWidth="191.0" promptText="Enter Customer NIC Here">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+      <JFXButton layoutX="702.0" layoutY="719.0" onMouseClicked="#btnSubmit" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #596275;" text="Submit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker fx:id="DatePickerBookingTillDate" layoutX="342.0" layoutY="219.0" onAction="#TotalPrice" promptText="Booking Till Date" />
+      <JFXTimePicker fx:id="TimePickerBookingTillTime" layoutX="799.0" layoutY="219.0" promptText="Booking Till Time" />
+      <JFXTextField fx:id="txtTotalPrice" editable="false" labelFloat="true" layoutX="95.0" layoutY="308.0" prefHeight="26.0" prefWidth="191.0" promptText="Total Price" />
+      <JFXTextField fx:id="txtBalance" editable="false" labelFloat="true" layoutX="96.0" layoutY="413.0" prefHeight="26.0" prefWidth="191.0" promptText="Balance" />
+      <JFXTextField fx:id="txtReservationID" layoutX="95.0" layoutY="157.0" prefHeight="26.0" prefWidth="191.0" promptText="Reservation ID" />
+      <JFXTextField fx:id="txtBookingTime" editable="false" layoutX="562.0" layoutY="221.0" prefHeight="26.0" prefWidth="191.0" promptText="Booking Time" />
+      <JFXDatePicker fx:id="DatePickerBookingDate" layoutX="95.0" layoutY="219.0" promptText="Booking  Date" />
+      <JFXTextField fx:id="txtPricePerDay" layoutX="800.0" layoutY="157.0" onAction="#txtPricePerDay" prefHeight="26.0" prefWidth="184.0" promptText="Price Per Day" />
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="856.0" layoutY="439.0" onMouseClicked="#imgPrint" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8-print-100%20(3).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

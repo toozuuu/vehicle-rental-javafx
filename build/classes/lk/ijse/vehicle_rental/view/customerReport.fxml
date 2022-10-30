@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="customerReportPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: #ffff;" stylesheets="@../style/managecustomerform.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.CustomerReportController">
+   <children>
+      <Label layoutX="86.0" layoutY="63.0" text="Customers">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <TableView fx:id="tblCustomer" layoutX="16.0" layoutY="152.0" prefHeight="488.0" prefWidth="979.0">
+         <columns>
+            <TableColumn prefWidth="115.0" text="NIC" />
+            <TableColumn prefWidth="113.0" text="Name" />
+            <TableColumn prefWidth="121.0" text="Mobile Number" />
+            <TableColumn prefWidth="104.0" text="Address" />
+            <TableColumn prefWidth="98.0" text="Birthday" />
+            <TableColumn prefWidth="123.0" text="Passpord ID" />
+            <TableColumn prefWidth="117.0" text="License NO" />
+            <TableColumn minWidth="0.0" prefWidth="99.0" text="Country" />
+            <TableColumn prefWidth="101.0" text="Gender" />
+         </columns>
+      </TableView>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="807.0" layoutY="672.0" onMouseClicked="#imgPrint" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8-print-100%20(3).png" />
+         </image>
+      </ImageView>
+      <JFXButton layoutX="52.0" layoutY="666.0" onAction="#btnBack" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #596275;" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

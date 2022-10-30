@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="paymentReportPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;?import javafx.scene.control.Label?&gt;&lt;?import javafx.scene.text.Font?&gt;&lt;Label layoutX=&quot;76.0&quot; layoutY=&quot;53.0&quot; text=&quot;Payment&quot; xmlns=&quot;http://javafx.com/javafx/10.0.1&quot; xmlns:fx=&quot;http://javafx.com/fxml/1&quot;&gt;   &lt;font&gt;      &lt;Font size=&quot;32.0&quot; /&gt;   &lt;/font&gt;&lt;/Label&gt;;" stylesheets="@../style/managecustomerform.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.PaymentReportController">
+   <children>
+      <Label layoutX="86.0" layoutY="63.0" text="Payment">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="915.0" layoutY="628.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8-synchronize-100.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="807.0" layoutY="625.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8-print-100%20(3).png" />
+         </image>
+      </ImageView>
+      <ScrollPane layoutX="36.0" layoutY="144.0" prefHeight="428.0" prefWidth="953.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1464.0">
+               <children>
+                  <TableView layoutX="-11.0" layoutY="-7.0" prefHeight="428.0" prefWidth="2101.0">
+                     <columns>
+                        <TableColumn prefWidth="93.0" text="NIC" />
+                        <TableColumn prefWidth="113.0" text="Vehicle NO" />
+                        <TableColumn prefWidth="117.0" text="Booking Date" />
+                        <TableColumn prefWidth="140.0" text="Booking Till Date" />
+                        <TableColumn prefWidth="118.0" text="Booking  Time" />
+                        <TableColumn prefWidth="145.0" text="Booking Till Time" />
+                        <TableColumn prefWidth="110.0" text="Driver Name" />
+                        <TableColumn prefWidth="169.0" text="Damage Charges" />
+                        <TableColumn prefWidth="124.0" text="Price_Per_Day" />
+                        <TableColumn prefWidth="116.0" text="Advance Paid" />
+                        <TableColumn prefWidth="92.0" text="Total Price" />
+                        <TableColumn prefWidth="135.0" text="Payment Status" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <JFXButton layoutX="93.0" layoutY="622.0" onAction="#btnBack" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #596275;" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

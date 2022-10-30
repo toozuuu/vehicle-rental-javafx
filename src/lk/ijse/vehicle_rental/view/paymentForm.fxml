@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="paymentPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: #ffff;" stylesheets="@../style/managecustomerform.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.PaymentController">
+   <children>
+      <Label layoutX="76.0" layoutY="53.0" text="Payment">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cmdDriver" disable="true" editable="true" labelFloat="true" layoutX="333.0" layoutY="147.0" onAction="#cmdSelectDriver" prefHeight="26.0" prefWidth="191.0" promptText="Driver" />
+      <JFXTextField fx:id="txtDamageCharges" disable="true" labelFloat="true" layoutX="557.0" layoutY="147.0" onAction="#txtDamageCharges" prefHeight="26.0" prefWidth="191.0" promptText="Enter the Damage Charges" />
+      <JFXTextField fx:id="txtAdvancePaid" labelFloat="true" layoutX="86.0" layoutY="351.0" onAction="#txtAdvancePaid" prefHeight="26.0" prefWidth="191.0" promptText="Enter the Advance Paid" />
+      <JFXCheckBox fx:id="checkBOXDriver" layoutX="332.0" layoutY="106.0" onMouseClicked="#isSelectedDriver" text="Add Driver ?" />
+      <JFXCheckBox fx:id="checkBOXDamage" disable="true" layoutX="557.0" layoutY="106.0" onMouseClicked="#isSelectedDamage" text="Damage Remark ?" />
+      <ScrollPane layoutX="32.0" layoutY="490.0" prefHeight="200.0" prefWidth="951.0">
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="1680.0">
+               <children>
+                  <TableView layoutX="-2.0" layoutY="-7.0" onMouseClicked="#tblRowClicked" prefHeight="214.0" prefWidth="1684.0">
+                     <columns>
+                        <TableColumn prefWidth="118.0" text="Reservation ID" />
+                        <TableColumn prefWidth="118.0" text="Payment Date" />
+                        <TableColumn prefWidth="99.0" text="NIC" />
+                        <TableColumn prefWidth="93.0" text="Vehicle NO" />
+                        <TableColumn prefWidth="114.0" text="Booking Date" />
+                        <TableColumn prefWidth="132.0" text="Booking Till Date" />
+                        <TableColumn prefWidth="118.0" text="Booking  Time" />
+                        <TableColumn prefWidth="145.0" text="Booking Till Time" />
+                        <TableColumn prefWidth="110.0" text="Driver Name" />
+                        <TableColumn prefWidth="169.0" text="Damage Charges" />
+                        <TableColumn prefWidth="124.0" text="Price_Per_Day" />
+                        <TableColumn prefWidth="116.0" text="Advance Paid" />
+                        <TableColumn prefWidth="92.0" text="Total Price" />
+                        <TableColumn prefWidth="135.0" text="Payment Status" />
+                     </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+         </content>
+      </ScrollPane>
+      <JFXButton buttonType="RAISED" layoutX="412.0" layoutY="311.0" onMouseClicked="#btnAdd" prefHeight="53.0" prefWidth="129.0" ripplerFill="BLACK" style="-fx-background-color: #90a4ae;" text="Add">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="796.0" layoutY="709.0" onMouseClicked="#btnSubmit" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #596275;" text="Submit">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="73.0" layoutY="709.0" onMouseClicked="#btnBack" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #596275;" text="Back">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXDatePicker fx:id="DatePickerBookingTillDate" layoutX="332.0" layoutY="209.0" onAction="#TotalPrice" promptText="Booking Till Date" />
+      <JFXTimePicker fx:id="TimePickerBookingTillTime" disable="true" layoutX="789.0" layoutY="209.0" promptText="Booking Till Time" />
+      <JFXTextField fx:id="txtTotalPrice" editable="false" labelFloat="true" layoutX="85.0" layoutY="298.0" prefHeight="26.0" prefWidth="191.0" promptText="Total Price" />
+      <JFXTextField fx:id="txtBalance" editable="false" labelFloat="true" layoutX="86.0" layoutY="403.0" prefHeight="26.0" prefWidth="191.0" promptText="Balance" />
+      <JFXTextField fx:id="txtReservationID" layoutX="85.0" layoutY="147.0" prefHeight="26.0" prefWidth="191.0" promptText="Reservation ID" />
+      <JFXTextField fx:id="txtBookingTime" layoutX="557.0" layoutY="211.0" prefHeight="26.0" prefWidth="191.0" promptText="Booking Time" />
+      <JFXDatePicker fx:id="DatePickerBookingDate" layoutX="85.0" layoutY="210.0" onAction="#TotalPrice" promptText="Booking Date" />
+      <JFXTextField fx:id="txtPricePerDay" labelFloat="true" layoutX="790.0" layoutY="147.0" onAction="#txtPricePerDay" prefHeight="26.0" prefWidth="191.0" promptText="Price Per Day" />
+      <JFXButton buttonType="RAISED" layoutX="575.0" layoutY="311.0" onMouseClicked="#btnClear" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Clear" textFill="#fffbfb">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="905.0" layoutY="318.0" onMouseClicked="#imgPrint" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8-print-100%20(3).png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.BackupDataController">
+   <children>
+      <Label layoutX="96.0" layoutY="73.0" text="Backup &amp; Restore">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="96.0" layoutY="188.0" prefHeight="256.0" prefWidth="822.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <JFXTextField fx:id="txtBrowsePath" layoutX="107.0" layoutY="81.0" prefHeight="26.0" prefWidth="423.0" />
+            <JFXButton buttonType="RAISED" layoutX="101.0" layoutY="151.0" onMouseClicked="#btnBackupNow" prefHeight="33.0" prefWidth="165.0" style="-fx-background-color: #ffff;" text="Backup Now">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="101.0" layoutY="197.0" onMouseClicked="#btnRestoreNow" prefHeight="33.0" prefWidth="165.0" style="-fx-background-color: #ffff;" text="Restore Now">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXButton>
+            <Label fx:id="labelField" layoutX="319.0" layoutY="151.0" prefHeight="33.0" prefWidth="214.0" text="Label" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

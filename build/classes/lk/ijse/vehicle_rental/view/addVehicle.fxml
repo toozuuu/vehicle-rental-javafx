@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.AddVehicleController">
+   <children>
+      <Label layoutX="96.0" layoutY="73.0" text="Manage Vehicle">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="61.0" layoutY="126.0" prefHeight="229.0" prefWidth="897.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <JFXTextField fx:id="txtMaxPassengers" labelFloat="true" layoutX="626.0" layoutY="141.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Max Passengers" />
+            <JFXTextField fx:id="txtDoors" labelFloat="true" layoutX="327.0" layoutY="141.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Doors" />
+            <JFXTextField fx:id="txtPricePerDay" labelFloat="true" layoutX="626.0" layoutY="189.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Price Per Day" />
+            <JFXTextField fx:id="txtVehicleBrand" labelFloat="true" layoutX="327.0" layoutY="34.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Vehicle Brand" />
+            <JFXTextField fx:id="txtVehicleModel" labelFloat="true" layoutX="626.0" layoutY="34.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Vehicle Model" />
+            <JFXTextField fx:id="txtVehicleNO" labelFloat="true" layoutX="42.0" layoutY="83.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Vehicle NO" />
+            <JFXTextField fx:id="txtColor" labelFloat="true" layoutX="626.0" layoutY="83.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Color" />
+            <JFXTextField fx:id="txtGearbox" labelFloat="true" layoutX="42.0" layoutY="141.0" prefHeight="26.0" prefWidth="220.0" promptText="Enter Gearbox" />
+            <JFXComboBox fx:id="cmdCategory" layoutX="41.0" layoutY="34.0" prefHeight="26.0" prefWidth="220.0" promptText="Select Category" />
+            <JFXComboBox fx:id="cmdFuel" layoutX="327.0" layoutY="83.0" prefHeight="26.0" prefWidth="220.0" promptText="Select Fuel" />
+         </children>
+      </AnchorPane>
+      <ScrollPane layoutX="16.0" layoutY="461.0" prefHeight="200.0" prefWidth="983.0">
+         <content>
+            <TableView fx:id="tblVehicle" onMouseClicked="#tblRowClicked" prefHeight="200.0" prefWidth="1019.0">
+               <columns>
+                  <TableColumn prefWidth="91.0" text="Category" />
+                  <TableColumn prefWidth="97.0" text="Vehicle NO" />
+                  <TableColumn prefWidth="85.0" text="Brand" />
+                  <TableColumn prefWidth="131.0" text="Model" />
+                  <TableColumn prefWidth="86.0" text="Gearbox" />
+                  <TableColumn prefWidth="78.0" text="Fuel" />
+                  <TableColumn text="Color" />
+                  <TableColumn prefWidth="135.0" text="Price Per Day" />
+                  <TableColumn prefWidth="130.0" text="Max Passengers" />
+                  <TableColumn prefWidth="105.0" text="Doors" />
+               </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <JFXButton buttonType="RAISED" layoutX="96.0" layoutY="369.0" onMouseClicked="#btnAdd" prefHeight="53.0" prefWidth="129.0" ripplerFill="BLACK" style="-fx-background-color: #90a4ae;" text="Add">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="303.0" layoutY="369.0" onMouseClicked="#btnUpdate" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Update">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="507.0" layoutY="369.0" onMouseClicked="#btnRemove" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Remove">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="711.0" layoutY="369.0" onMouseClicked="#btnClearTxtField" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <ImageView fitHeight="40.0" fitWidth="44.0" layoutX="948.0" layoutY="689.0" onMouseClicked="#imgRefresh" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/icons8-synchronize-100.png" />
+         </image>
+      </ImageView>
+      <JFXTextField fx:id="txtSearchVehicle" labelFloat="true" layoutX="727.0" layoutY="80.0" onAction="#searchCustomer" prefHeight="26.0" prefWidth="193.0" promptText="Enter Vehicle NO Here">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

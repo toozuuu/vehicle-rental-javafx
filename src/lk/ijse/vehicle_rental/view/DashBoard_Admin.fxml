@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="adminPane" prefHeight="863.0" prefWidth="1307.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.DashBoard_AdminController">
+   <children>
+      <VBox layoutY="81.0" prefHeight="797.0" prefWidth="298.0" style="-fx-background-color: #263238;">
+         <children>
+            <HBox accessibleRole="BUTTON" onMouseClicked="#adminClickedHome" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-home-page-100%20(1).png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text="  Home" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="110.0" onMouseClicked="#adminClickedResivetionDetail1" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-plus-1-day-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="88.0" prefWidth="224.0" text=" Reservation Detail" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox accessibleRole="BUTTON" onMouseClicked="#userClickedBooking" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-reception-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text=" Rent" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="224.0" onMouseClicked="#adminClickedVehicle" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-car-rental-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text=" Manage Vehicles" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="343.0" onMouseClicked="#adminClickedDrivers" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-driver-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text="  Manage Drivers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox accessibleRole="BUTTON" onMouseClicked="#adminClickedCustomer" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-business-building-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text=" Manage Customers" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="395.0" onMouseClicked="#adminClickedMaintenance" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-maintenance-100.png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text="  Maintenance" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="447.0" onMouseClicked="#adminClickedPayments" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-card-payment-100%20(2).png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text="   Payment " textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+            </HBox>
+            <HBox accessibleRole="BUTTON" layoutX="10.0" layoutY="642.0" onMouseClicked="#adminReport" prefHeight="52.0" prefWidth="298.0" spacing="5.0" styleClass="sidepane-HBox" stylesheets="@../style/itemmanagement.css">
+               <children>
+                  <ImageView fitHeight="68.0" fitWidth="52.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../asset/icons8-pie-chart-100%20(2).png" />
+                     </image>
+                  </ImageView>
+                  <Label prefHeight="88.0" prefWidth="224.0" text="  Reports" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold" size="20.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </Label>
+               </children>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <padding>
+                  <Insets left="10.0" />
+               </padding>
+               <VBox.margin>
+                  <Insets top="24.0" />
+               </VBox.margin>
+            </HBox>
+         </children></VBox>
+      <AnchorPane prefHeight="86.0" prefWidth="1309.0" style="-fx-background-color: #ecf0f1;">
+         <children>
+            <Label layoutX="64.0" layoutY="14.0" prefHeight="34.0" prefWidth="77.0" text="Ryder">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#868686" />
+                        <Stop color="#c6c6c6" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="95.0" layoutY="37.0" text="Ever Better ">
+               <font>
+                  <Font size="12.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#868686" />
+                        <Stop color="#aba8a8" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label fx:id="curTime" layoutX="985.0" layoutY="31.0" text="10:45 p.m">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="adminLoadPane" layoutX="298.0" layoutY="87.0" prefHeight="791.0" prefWidth="1011.0">
+         <padding>
+            <Insets left="10.0" />
+         </padding></AnchorPane>
+   </children>
+</AnchorPane>

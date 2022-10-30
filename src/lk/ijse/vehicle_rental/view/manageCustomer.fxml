@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="customerPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: #ffff;" stylesheets="@../style/managecustomerform.css" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.manageCustomerController">
+   <children>
+      <Label layoutX="76.0" layoutY="53.0" text="Manage Customer">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <JFXTextField fx:id="txtCustomerNIC" labelFloat="true" layoutX="101.0" layoutY="127.0" promptText="NIC" />
+      <JFXTextField fx:id="txtCustomerName" labelFloat="true" layoutX="385.0" layoutY="127.0" prefHeight="26.0" prefWidth="241.0" promptText="Name" />
+      <JFXTextField fx:id="txtCustomerMobileNumber" labelFloat="true" layoutX="707.0" layoutY="127.0" prefHeight="26.0" prefWidth="241.0" promptText="Mobile Number" />
+      <JFXTextArea fx:id="txtCustomerAddress" labelFloat="true" layoutX="101.0" layoutY="175.0" prefHeight="118.0" prefWidth="247.0" promptText="Address" />
+      <JFXDatePicker fx:id="setCustomerBirthday" layoutX="385.0" layoutY="196.0" promptText="Birthday" />
+      <JFXTextField fx:id="txtCustomerPasspordID" labelFloat="true" layoutX="707.0" layoutY="198.0" prefHeight="26.0" prefWidth="241.0" promptText="Passpord ID" />
+      <JFXTextField fx:id="txtCustomerLicenseNO" labelFloat="true" layoutX="385.0" layoutY="273.0" prefHeight="26.0" prefWidth="241.0" promptText="License NO" />
+      <JFXTextField fx:id="txtCustomerCountry" labelFloat="true" layoutX="707.0" layoutY="273.0" prefHeight="26.0" prefWidth="241.0" promptText="Country" />
+      <JFXRadioButton fx:id="radioMale" layoutX="101.0" layoutY="336.0" text="Male">
+         <toggleGroup>
+            <ToggleGroup fx:id="genderGroup" />
+         </toggleGroup></JFXRadioButton>
+      <JFXRadioButton fx:id="radioFemale" layoutX="230.0" layoutY="336.0" text="Female" toggleGroup="$genderGroup" />
+      <JFXButton buttonType="RAISED" layoutX="114.0" layoutY="378.0" onMouseClicked="#btnAdd" prefHeight="53.0" prefWidth="129.0" ripplerFill="BLACK" style="-fx-background-color: #90a4ae;" text="Add">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="321.0" layoutY="378.0" onMouseClicked="#btnUpdate" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Update">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="537.0" layoutY="378.0" onMouseClicked="#btnRemove" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Remove">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="738.0" layoutY="378.0" onMouseClicked="#btnClearTxtField" prefHeight="53.0" prefWidth="129.0" style="-fx-background-color: #90a4ae;" text="Clear" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXButton>
+      <TableView fx:id="tblCustomer" layoutX="27.0" layoutY="464.0" onMouseClicked="#tblRowClicked" prefHeight="200.0" prefWidth="957.0">
+        <columns>
+          <TableColumn prefWidth="98.0" text="NIC" />
+          <TableColumn prefWidth="104.0" text="Passport ID" />
+            <TableColumn prefWidth="117.0" text="Name" />
+            <TableColumn prefWidth="108.0" text="Address" />
+            <TableColumn prefWidth="94.0" text="Birthday" />
+            <TableColumn prefWidth="118.0" text="Mobile Phone" />
+            <TableColumn prefWidth="102.0" text="Gender" />
+            <TableColumn prefWidth="107.0" text="License NO" />
+            <TableColumn prefWidth="108.0" text="Country" />
+        </columns>
+      </TableView>
+      <JFXTextField fx:id="txtSearchCustomerNIC" labelFloat="true" layoutX="706.0" layoutY="60.0" onAction="#searchCustomer" prefHeight="26.0" prefWidth="193.0" promptText="Enter Customer NIC Here">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </JFXTextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="reportPane" prefHeight="791.0" prefWidth="1011.0" style="-fx-background-color: #ffff;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.ReportsController">
+   <children>
+      <Label layoutX="86.0" layoutY="63.0" text="Reports">
+         <font>
+            <Font size="32.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="228.0" layoutY="121.0" prefHeight="633.0" prefWidth="576.0" style="-fx-background-color: #dfe4ea;">
+         <children>
+            <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="44.0" onAction="#btnCustomerDetailReport" prefHeight="79.0" prefWidth="476.0" ripplerFill="WHITE" style="-fx-background-color: #8395a7;" text="Customer Detail Report">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="152.0" onAction="#btnVehicleDetailReport" prefHeight="79.0" prefWidth="476.0" ripplerFill="WHITE" style="-fx-background-color: #8395a7;" text="Vehicle Detail Report">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="262.0" onAction="#btnDriverDetailReport" prefHeight="79.0" prefWidth="476.0" ripplerFill="WHITE" style="-fx-background-color: #8395a7;" text="Driver Detail Report">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="370.0" onAction="#btnMaintenanceDetailReport" prefHeight="79.0" prefWidth="476.0" ripplerFill="WHITE" style="-fx-background-color: #8395a7;" text="Maintenance Detail Report">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="50.0" layoutY="475.0" onAction="#btnPaymentDetailReport" prefHeight="79.0" prefWidth="476.0" ripplerFill="WHITE" style="-fx-background-color: #8395a7;" text="Payment Detail Report">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

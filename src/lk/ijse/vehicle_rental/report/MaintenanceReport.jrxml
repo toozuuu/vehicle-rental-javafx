@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="MaintenanceReport" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="34aa2b3f-406b-49e2-ac84-19de4335811e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Project"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<parameter name="Date1" class="java.lang.String"/>
+	<parameter name="Date2" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[select * from Maintenance ]]>
+	</queryString>
+	<field name="MID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="MID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="Vehicle_No" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Vehicle_No"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="Company_Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Company_Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="Company_Address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Company_Address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="Contact_Number" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="Contact_Number"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="AddedOn" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="AddedOn"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="NextDueDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="NextDueDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="PaymentStatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="PaymentStatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<field name="Amount" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.label" value="Amount"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="Maintenance"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="261" y="20" width="280" height="30" uuid="28bbfd25-049e-4afd-8cbb-2abce42e87e9"/>
+				<textElement>
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Maintenance Reports]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="450" splitType="Stretch">
+			<staticText>
+				<reportElement x="20" y="10" width="100" height="30" uuid="615c808d-824a-4e86-a6dd-d6f24e8ea925"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[From :]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="260" y="10" width="100" height="30" uuid="07c18c4f-f7eb-474f-92ee-9ac880739167"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[TO :]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="130" y="10" width="100" height="30" forecolor="#FF0400" uuid="7234d55a-d044-4618-92e1-c245ff81cf58"/>
+				<textFieldExpression><![CDATA[$P{Date1}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="370" y="10" width="100" height="30" forecolor="#FF0400" uuid="3e8ed1c1-08b7-47ec-ba74-d9290afb3ac5"/>
+				<textFieldExpression><![CDATA[$P{Date2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="120" width="70" height="30" uuid="a928c8d3-4b3f-4fd2-924c-1fd26a39df99"/>
+				<textFieldExpression><![CDATA[$F{MID}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="90" width="70" height="30" uuid="5c5e2f5c-e4fc-4d6e-b167-03ca74c6e0c4"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[MID]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="80" y="120" width="100" height="30" uuid="c8a9822b-ea5a-449e-bb93-1fdeb4080251"/>
+				<textFieldExpression><![CDATA[$F{Vehicle_No}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="80" y="90" width="100" height="30" uuid="a06e798f-da83-4494-9dfa-add66c7b2991"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vehicle_No]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="300" y="120" width="110" height="30" uuid="e21b8bec-1feb-4cef-be03-328343f2d539"/>
+				<textFieldExpression><![CDATA[$F{Company_Address}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="300" y="90" width="110" height="30" uuid="b2ef96d5-4898-4645-84c5-3c6ad69508e9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Company_Address]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="120" width="100" height="30" uuid="096e9249-5775-4608-96bd-1912e7bf42b4"/>
+				<textFieldExpression><![CDATA[$F{Company_Name}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="190" y="90" width="100" height="30" uuid="2640eda9-84eb-49da-bc4e-7b794fd1399e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Company_Name]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="420" y="120" width="100" height="30" uuid="ff4c841c-6f5c-4bdb-b99a-aa36a50cdc24"/>
+				<textFieldExpression><![CDATA[$F{Contact_Number}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="420" y="90" width="100" height="30" uuid="87b8a45a-7195-4793-8206-982ce1b71f18"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Contact_Number]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="530" y="120" width="90" height="30" uuid="5d09472a-bc58-4395-b763-887d6270558a"/>
+				<textFieldExpression><![CDATA[$F{AddedOn}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="530" y="90" width="90" height="30" uuid="70f1df58-ee25-4557-843a-2981d08cb07e"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[AddedOn]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="630" y="120" width="90" height="30" uuid="9ab74419-e6a6-492a-ae42-ef7571ab9c49"/>
+				<textFieldExpression><![CDATA[$F{NextDueDate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="630" y="90" width="90" height="30" uuid="51f1619c-0db2-4e59-b9bd-2f2ffc167b9f"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[NextDueDate]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="730" y="120" width="80" height="30" uuid="ee168689-beeb-4a82-80d5-e79fd8492f2d"/>
+				<textFieldExpression><![CDATA[$F{Amount}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="730" y="90" width="80" height="30" uuid="dacbcef5-fabf-488f-9a6e-3d7131f805d9"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[Amount]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

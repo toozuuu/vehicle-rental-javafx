@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="497.0" prefWidth="921.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.vehicle_rental.controller.LoginController">
+   <children>
+      <AnchorPane prefHeight="508.0" prefWidth="457.0" style="-fx-background-color: #222f3e;">
+         <children>
+            <Label layoutX="114.0" layoutY="115.0" text="Ryder">
+               <font>
+                  <Font name="System Bold" size="60.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#868686" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+            <Label layoutX="235.0" layoutY="187.0" text="Ever Better ">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <textFill>
+                  <LinearGradient endX="1.0" endY="1.0">
+                     <stops>
+                        <Stop color="#868686" />
+                        <Stop color="WHITE" offset="1.0" />
+                     </stops>
+                  </LinearGradient>
+               </textFill>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="457.0" prefHeight="508.0" prefWidth="464.0" style="-fx-background-color: #ffff;">
+         <children>
+            <JFXTextArea fx:id="txtLoginUserName" labelFloat="true" layoutX="95.0" layoutY="167.0" prefHeight="21.0" prefWidth="305.0" promptText="User Name">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXTextArea>
+            <JFXPasswordField fx:id="txtLoginPassword" labelFloat="true" layoutX="95.0" layoutY="285.0" prefHeight="34.0" prefWidth="305.0" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </JFXPasswordField>
+            <Label layoutX="152.0" layoutY="79.0" prefHeight="36.0" prefWidth="188.0" textFill="#141414">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="63.0" fitWidth="79.0" layoutX="194.0" layoutY="398.0" onMouseClicked="#btnLogin" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../asset/icons8-login-filled-100.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
